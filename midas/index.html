@@ -13,66 +13,59 @@
   }
   *{box-sizing:border-box;}
   body{
-    margin:0; padding:14px 12px 20px; color:var(--text); background:#fff;
+    margin:0; padding:10px 12px 16px; color:var(--text); background:#fff;
     font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
-    font-size:15px; line-height:1.6;
+    font-size:15px; line-height:1.55;
   }
-  .card{border:1px solid var(--amber-light); background:var(--amber-bg); border-radius:10px; padding:12px 14px; margin:0 0 14px;}
-  .card h2{margin:0 0 6px; font-size:15px; color:var(--amber-dark);}
-  .card p{margin:0; font-size:13px; color:#6b5d33;}
-  fieldset{border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:0 0 14px;}
-  legend{font-weight:800; font-size:14px; padding:0 6px;}
-  .row{display:flex; flex-wrap:wrap; gap:10px;}
-  .field{flex:1 1 150px; min-width:130px;}
-  label{display:block; font-size:12px; font-weight:700; color:#555; margin:0 0 4px;}
+  fieldset{border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:0 0 10px;}
+  legend{font-weight:800; font-size:13px; padding:0 6px;}
+  .row{display:flex; flex-wrap:wrap; gap:8px;}
+  .field{flex:1 1 140px; min-width:120px;}
+  label{display:block; font-size:12px; font-weight:700; color:#555; margin:0 0 3px;}
   input[type=number], select{
-    width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:8px;
+    width:100%; padding:7px 9px; border:1px solid var(--line); border-radius:8px;
     font:inherit; font-size:14px; background:#fff;
   }
   input[type=number]:focus, select:focus{outline:2px solid var(--amber); border-color:var(--amber);}
   input[disabled]{background:#f2f4f7; color:#99a;}
   .seg{display:flex; gap:6px; margin:0 0 8px;}
   .seg button{
-    flex:1; border:1px solid var(--line); background:#fff; border-radius:9px; padding:9px 4px;
+    flex:1; border:1px solid var(--line); background:#fff; border-radius:9px; padding:8px 4px;
     font:inherit; font-weight:800; font-size:14px; cursor:pointer; color:#556;
   }
   .seg button.on{background:var(--amber); border-color:var(--amber); color:#3d3000;}
-  table{width:100%; border-collapse:collapse; font-size:13px; margin:8px 0 4px;}
+  table{width:100%; border-collapse:collapse; font-size:12px; margin:6px 0 4px;}
   th{background:var(--thead); font-weight:700;}
-  th,td{border:1px solid var(--line); padding:5px 6px; text-align:center;}
+  th,td{border:1px solid var(--line); padding:4px 6px; text-align:center;}
   tbody tr:nth-child(even){background:var(--alt);}
-  td input[type=number]{padding:5px 4px; font-size:13px; text-align:center;}
-  details{margin:8px 0 0;}
-  summary{cursor:pointer; font-size:13px; font-weight:700; color:#667;}
+  td input[type=number]{padding:4px; font-size:12px; text-align:center;}
+  details{margin:6px 0 0;}
+  summary{cursor:pointer; font-size:12px; font-weight:700; color:#667;}
   .btn-main{
-    display:block; width:100%; border:0; border-radius:9px; padding:13px; margin:4px 0 0;
-    background:var(--amber); color:#3d3000; font:inherit; font-weight:800; font-size:16px; cursor:pointer;
+    display:block; width:100%; border:0; border-radius:9px; padding:12px; margin:2px 0 0;
+    background:var(--amber); color:#3d3000; font:inherit; font-weight:800; font-size:15px; cursor:pointer;
   }
   .btn-main:hover{filter:brightness(1.05);}
-  #result{display:none; margin-top:14px;}
-  .rTitle{font-size:14px; font-weight:800; margin:14px 0 6px; padding-left:10px; border-left:4px solid var(--amber);}
-  .verdict{border-radius:10px; padding:10px 14px; font-size:14px; font-weight:800; margin:0 0 8px; text-align:center;}
+  #result{display:none; margin-top:12px;}
+  .verdict{border-radius:10px; padding:10px 12px; font-size:14px; font-weight:800; margin:0 0 8px; text-align:center;}
   .verdict.good{background:#e9f6ee; border:1px solid #b9e0c6; color:var(--green);}
   .verdict.bad{background:#fbf0ef; border:1px solid #ecc6c4; color:var(--red);}
-  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px;}
-  .stat{border:1px solid var(--line); border-radius:10px; padding:8px 10px; background:#fff;}
-  .stat b{display:block; font-size:11px; color:#667; font-weight:700; margin:0 0 3px;}
+  .verdict.info{background:var(--amber-bg); border:1px solid var(--amber-light); color:var(--amber-dark);}
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(135px,1fr)); gap:7px; margin:0 0 8px;}
+  .stat{border:1px solid var(--line); border-radius:10px; padding:7px 9px; background:#fff;}
+  .stat b{display:block; font-size:11px; color:#667; font-weight:700; margin:0 0 2px;}
   .stat span{font-size:16px; font-weight:800;}
+  .stat .big{font-size:18px;}
   .o{color:var(--orange);} .g{color:var(--green);} .r{color:var(--red);}
-  .note{font-size:12px; color:#778; margin:12px 0 0; line-height:1.7;}
-  .warn{font-size:12px; color:#a05a00; background:#fff4e5; border:1px solid #ffd8a1; border-radius:8px; padding:7px 10px; margin:8px 0 0; display:none;}
-  .err{color:var(--red); font-weight:700; font-size:13px; margin:8px 0 0; display:none;}
+  .note{font-size:11px; color:#778; margin:8px 0 0; line-height:1.6;}
+  .warn{font-size:12px; color:#a05a00; background:#fff4e5; border:1px solid #ffd8a1; border-radius:8px; padding:6px 10px; margin:0 0 8px; display:none;}
+  .err{color:var(--red); font-weight:700; font-size:13px; margin:6px 0 0; display:none;}
 </style>
 </head>
 <body>
 
-<div class="card">
-  <h2>⚖️ 미다스의 금고 기대값 계산기</h2>
-  <p>아이템 종류를 고르면 <b>공개된 강화 확률표가 자동 적용</b>됩니다. 베이스 가격·주문서·매입 보상을 넣고 계산하면, <b>① 베이스 N개 투입 시 기대값</b>과 <b>② 목표 1개 완성에 드는 평균 비용</b>을 함께 보여줍니다. 비용은 전부 다이아 기준입니다.</p>
-</div>
-
 <fieldset>
-  <legend>1. 아이템 종류 · 강화 목표</legend>
+  <legend>1. 아이템 · 목표 강화 단계</legend>
   <div class="seg" id="itemSeg">
     <button type="button" data-k="weapon" class="on">🗡️ 무기</button>
     <button type="button" data-k="armor">🛡️ 방어구</button>
@@ -80,103 +73,92 @@
   </div>
   <div class="row">
     <div class="field">
-      <label for="startLv">시작 강화 단계</label>
+      <label for="startLv">시작 단계</label>
       <select id="startLv"></select>
     </div>
     <div class="field">
-      <label for="targetLv">목표 강화 단계 (미다스 매입 대상)</label>
+      <label for="targetLv">목표 단계 (미다스 매입 조건)</label>
       <select id="targetLv"></select>
     </div>
   </div>
-  <p class="warn" id="accWarn">방어구 확률표는 아직 확인 전이라 임시로 무기와 동일하게 넣어두었습니다. 게임 내 '강화 확률 정보'를 확인해 아래 표에서 고쳐주세요.</p>
-  <details id="tblBox">
+  <details>
     <summary>적용 중인 강화 확률표 보기 · 수정</summary>
     <table id="probTable">
-      <thead><tr><th>현재 단계</th><th>성공 확률(%)</th><th>실패 시</th></tr></thead>
+      <thead><tr><th>단계</th><th>성공 확률(%)</th><th>실패 시</th></tr></thead>
       <tbody></tbody>
     </table>
-    <p class="note" style="margin-top:4px;">게임 내 '강화 확률 정보' 표기 기준. 패치로 바뀌면 여기서 고쳐 계산할 수 있어요.</p>
+    <p class="note" style="margin-top:2px;">게임 내 '강화 확률 정보' 표기 기준. 패치로 바뀌면 여기서 고쳐 계산하세요.</p>
   </details>
 </fieldset>
 
 <fieldset>
-  <legend>2. 비용 · 보상</legend>
+  <legend>2. 보상 · 비용</legend>
   <div class="row">
-    <div class="field">
-      <label for="basePrice">베이스 아이템 개당 가격 (다이아)</label>
-      <input type="number" id="basePrice" min="0" step="any" value="0">
-    </div>
     <div class="field">
       <label for="reward">미다스 매입 보상 (다이아)</label>
       <input type="number" id="reward" min="0" step="any" value="0">
     </div>
-  </div>
-  <div class="row" style="margin-top:10px;">
     <div class="field">
       <label for="scrollMode">강화 주문서</label>
       <select id="scrollMode">
-        <option value="free">무료 주문서 사용 (비용 0)</option>
-        <option value="buy">거래소 구매 (장당 가격 입력)</option>
+        <option value="free">무료 주문서 (비용 0)</option>
+        <option value="buy">거래소 구매</option>
       </select>
     </div>
     <div class="field">
-      <label for="scrollPrice">주문서 장당 가격 (다이아)</label>
+      <label for="scrollPrice">주문서 장당 가격</label>
       <input type="number" id="scrollPrice" min="0" step="any" value="0" disabled>
     </div>
     <div class="field">
-      <label for="nBase">투입할 베이스 개수 (유즈케이스 ①)</label>
-      <input type="number" id="nBase" min="1" step="1" value="10">
+      <label for="basePrice">베이스 개당 가격 <span style="font-weight:400; color:#99a;">(선택)</span></label>
+      <input type="number" id="basePrice" min="0" step="any" value="0">
     </div>
   </div>
 </fieldset>
 
-<button type="button" class="btn-main" id="calc">기대값 계산하기</button>
+<button type="button" class="btn-main" id="calc">필요 베이스 개수 · 손익분기 계산하기</button>
 <p class="err" id="errMsg"></p>
 
 <div id="result">
-  <div class="rTitle">① 베이스 <span id="rN">N</span>개를 투입하면</div>
-  <div class="verdict" id="verdict1"></div>
-  <div class="stats">
-    <div class="stat"><b>목표 도달 기대 개수</b><span class="o" id="expSucc">-</span></div>
-    <div class="stat"><b>1개 이상 성공할 확률</b><span id="anySucc">-</span></div>
-    <div class="stat"><b>기대 주문서 소모</b><span id="expScrolls1">-</span></div>
-    <div class="stat"><b>기대 총비용</b><span class="o" id="cost1">-</span></div>
-    <div class="stat"><b>기대 매입 수익</b><span id="rev1">-</span></div>
-    <div class="stat"><b>기대 순이익</b><span id="profit1">-</span></div>
-  </div>
+  <p class="warn" id="rareWarn">⚠️ 이 목표는 성공 확률이 극히 낮아 사실상 도달이 어렵습니다. 목표 단계를 확인해주세요.</p>
 
-  <div class="rTitle">② 목표 아이템 1개를 완성하려면 (평균)</div>
-  <div class="verdict" id="verdict2"></div>
   <div class="stats">
     <div class="stat"><b>베이스 1개 성공 확률</b><span id="pOne">-</span></div>
-    <div class="stat"><b>평균 필요 베이스 개수</b><span class="o" id="expBases">-</span></div>
-    <div class="stat"><b>평균 주문서 소모</b><span id="expScrolls2">-</span></div>
-    <div class="stat"><b>평균 완성 비용</b><span class="o" id="cost2">-</span></div>
-    <div class="stat"><b>매입 보상</b><span id="rev2">-</span></div>
-    <div class="stat"><b>1개당 기대 순이익</b><span id="profit2">-</span></div>
+    <div class="stat"><b>평균 필요 베이스 개수</b><span class="o big" id="expBases">-</span></div>
+    <div class="stat"><b>평균 주문서 소모</b><span id="expScrolls">-</span></div>
+  </div>
+
+  <div class="verdict info" id="beLine"></div>
+
+  <div id="profitBox" style="display:none;">
+    <div class="verdict" id="verdict"></div>
+    <div class="stats">
+      <div class="stat"><b>평균 완성 비용 (베이스+주문서)</b><span class="o" id="cost">-</span></div>
+      <div class="stat"><b>매입 보상</b><span id="rew">-</span></div>
+      <div class="stat"><b>1개당 기대 순이익</b><span id="profit">-</span></div>
+    </div>
   </div>
 
   <p class="note">
-    · 계산은 확률 체인 기대값 공식(유지=성공까지 재시도, 파괴=베이스 소모 후 새 베이스)으로 구하며 시뮬레이션 오차가 없습니다.<br>
-    · 강화 1회 시도 = 주문서 1장 소모 기준입니다.<br>
-    · 확률·매입 보상은 패치로 바뀔 수 있으니 계산 시점의 게임 내 표기를 기준으로 입력하세요.
+    · 확률 체인 기대값 공식(유지=성공까지 재시도, 파괴=베이스 소모 후 새 베이스)으로 계산하며 시뮬레이션 오차가 없습니다. 강화 1회 = 주문서 1장 기준.<br>
+    · <b>손익분기 단가</b> = (매입 보상 − 평균 주문서 비용) ÷ 평균 필요 베이스 개수. 기대값(장기 평균) 기준이라 단기 운에 따라 결과는 달라질 수 있어요.<br>
+    · 확률·보상은 패치로 바뀔 수 있으니 계산 시점의 게임 내 표기를 기준으로 입력하세요.
   </p>
 </div>
 
 <script>
 (function(){
-  // 강화 확률표 (게임 내 '강화 확률 정보' 표기 · 실패 시 유지/파괴, +2 확률 0%는 제외)
-  // p: 성공확률(%), f: 'keep'(유지) | 'break'(파괴)
+  // 강화 확률표 (게임 내 '강화 확률 정보' 표기 · 실패 시 유지/파괴)
   var TABLES = {
-    weapon: { name:'무기', rows: [
+    weapon: { rows: [
       {p:100,f:'keep'},{p:100,f:'keep'},{p:100,f:'keep'},{p:100,f:'keep'},{p:100,f:'keep'},
       {p:65,f:'break'},{p:50,f:'break'},{p:35,f:'break'},{p:20,f:'break'},{p:5,f:'break'},{p:3,f:'break'},{p:1,f:'break'}
     ]},
-    armor: { name:'방어구', rows: [ // ※ 방어구 확률표 미확보 — 임시로 무기와 동일. 게임 내 표기 확인 후 아래 표에서 수정
+    armor: { rows: [ // 무기와 동일한 확률 체계 (확인됨)
       {p:100,f:'keep'},{p:100,f:'keep'},{p:100,f:'keep'},{p:100,f:'keep'},{p:100,f:'keep'},
       {p:65,f:'break'},{p:50,f:'break'},{p:35,f:'break'},{p:20,f:'break'},{p:5,f:'break'},{p:3,f:'break'},{p:1,f:'break'}
     ]},
-    acc: { name:'장신구', rows: [ // 게임 내 표기 확정값 (0~4 + 5~11)
+    acc: { rows: [
       {p:100,f:'keep'},{p:80,f:'break'},{p:65,f:'break'},{p:50,f:'break'},{p:35,f:'break'},
       {p:20,f:'break'},{p:10,f:'break'},{p:5,f:'break'},{p:4,f:'break'},{p:3,f:'break'},{p:2,f:'break'},{p:1,f:'break'}
     ]}
@@ -193,7 +175,7 @@
     tbody.innerHTML = '';
     rows.forEach(function(r, i){
       var tr = document.createElement('tr');
-      tr.innerHTML = '<td>+' + i + ' → +' + (i+1) + '</td>' +
+      tr.innerHTML = '<td>+' + i + '→+' + (i+1) + '</td>' +
         '<td><input type="number" class="tp" data-i="' + i + '" min="0.01" max="100" step="any" value="' + r.p + '"></td>' +
         '<td>' + (r.f === 'keep' ? '유지' : '<span class="r"><b>파괴</b></span>') + '</td>';
       tbody.appendChild(tr);
@@ -203,8 +185,7 @@
     for (var s=0; s<maxLv; s++) startSel.appendChild(new Option('+'+s, s));
     for (var t=1; t<=maxLv; t++) targetSel.appendChild(new Option('+'+t, t));
     startSel.value = 0;
-    targetSel.value = maxLv; // 기본: 최고 단계
-    document.getElementById('accWarn').style.display = (cur === 'armor') ? 'block' : 'none';
+    targetSel.value = Math.min(7, maxLv); // 기본 목표: +7 (통상적인 매입 조건 수준)
   }
   tbody.addEventListener('input', function(e){
     var el = e.target;
@@ -230,7 +211,6 @@
     if (d === undefined) d = 0;
     return x.toLocaleString('ko-KR', {maximumFractionDigits:d, minimumFractionDigits:0});
   }
-  function money(x){ return fmt(x, 0); }
 
   document.getElementById('calc').onclick = function(){
     var err = document.getElementById('errMsg');
@@ -241,66 +221,65 @@
     var T = parseInt(targetSel.value, 10);
     if (T <= s){ err.textContent = '목표 단계가 시작 단계보다 높아야 합니다.'; err.style.display='block'; return; }
 
-    var basePrice = parseFloat(document.getElementById('basePrice').value) || 0;
     var reward = parseFloat(document.getElementById('reward').value) || 0;
     var scrollPrice = document.getElementById('scrollMode').value === 'buy'
       ? (parseFloat(document.getElementById('scrollPrice').value) || 0) : 0;
-    var N = Math.max(1, Math.floor(parseFloat(document.getElementById('nBase').value) || 1));
+    var basePrice = parseFloat(document.getElementById('basePrice').value) || 0;
 
-    // 정확 계산: P = 파괴 구간 성공확률의 곱, E[주문서/베이스] 역방향 점화식
+    // 정확 계산: P = 파괴 구간 성공확률의 곱, E = 베이스 1개당 기대 주문서(역방향 점화식)
     var P = 1;
     for (var i=s; i<T; i++){
       if (rows[i].f === 'break') P *= rows[i].p / 100;
     }
-    var E = 0; // E[i]: i단계에서 (성공 or 파괴)까지 기대 주문서 수 — 역방향
+    var E = 0;
     for (var j=T-1; j>=s; j--){
       var p = rows[j].p / 100;
       E = (rows[j].f === 'keep') ? (1/p + E) : (1 + p * E);
     }
-    // E는 시작단계 s 기준 베이스 1개당 기대 주문서 수
 
-    // ① N개 투입
-    var succ = N * P;
-    var scrolls1 = N * E;
-    var cost1 = N * basePrice + scrolls1 * scrollPrice;
-    var rev1 = succ * reward;
-    var profit1 = rev1 - cost1;
-    var anyP = 1 - Math.pow(1 - P, N);
+    var bases = 1 / P;                 // 평균 필요 베이스 개수 (역산)
+    var scrolls = E / P;               // 목표 1개 완성까지 평균 주문서
+    var scrollCost = scrolls * scrollPrice;
+    var breakEven = (reward - scrollCost) / bases;   // 손익분기 베이스 단가
 
-    // ② 1개 완성 (평균)
-    var bases2 = 1 / P;
-    var scrolls2 = E / P;
-    var cost2 = bases2 * basePrice + scrolls2 * scrollPrice;
-    var profit2 = reward - cost2;
+    document.getElementById('rareWarn').style.display = (P < 1e-5) ? 'block' : 'none';
+    document.getElementById('pOne').textContent =
+      (P*100 >= 1) ? (P*100).toFixed(1)+'%' : (P*100).toPrecision(2)+'%';
+    document.getElementById('expBases').textContent = fmt(bases, bases<100?1:0) + '개';
+    document.getElementById('expScrolls').textContent = fmt(scrolls, scrolls<100?1:0) + '장';
 
-    document.getElementById('rN').textContent = fmt(N);
-    document.getElementById('expSucc').textContent = fmt(succ, 2) + '개';
-    document.getElementById('anySucc').textContent = (anyP*100).toFixed(1) + '%';
-    document.getElementById('expScrolls1').textContent = fmt(scrolls1, 1) + '장';
-    document.getElementById('cost1').textContent = money(cost1);
-    document.getElementById('rev1').textContent = money(rev1);
-    var p1 = document.getElementById('profit1');
-    p1.textContent = (profit1>=0?'+':'') + money(profit1);
-    p1.className = profit1>=0 ? 'g' : 'r';
-    var v1 = document.getElementById('verdict1');
-    v1.className = 'verdict ' + (profit1>=0?'good':'bad');
-    v1.textContent = profit1>=0
-      ? '👍 기대값상 이득 — 평균 ' + money(profit1) + ' 다이아 남습니다'
-      : '👎 기대값상 손해 — 평균 ' + money(-profit1) + ' 다이아 잃습니다';
+    var be = document.getElementById('beLine');
+    if (reward > 0){
+      if (breakEven > 0){
+        be.textContent = '💡 손익분기 베이스 단가: ' + fmt(breakEven, breakEven<10?1:0)
+          + ' 다이아 — 베이스를 이 가격 이하로 구하면 기대값상 이득입니다';
+      } else {
+        be.textContent = '⚠️ 주문서 비용만으로 매입 보상을 넘습니다 — 이 조건으로는 이득이 불가능해요';
+      }
+      be.style.display = 'block';
+    } else {
+      be.textContent = '📝 미다스 매입 보상을 입력하면 손익분기 베이스 단가를 알려드려요';
+      be.style.display = 'block';
+    }
 
-    document.getElementById('pOne').textContent = (P*100).toFixed(P<0.01?3:1) + '%';
-    document.getElementById('expBases').textContent = fmt(bases2, 1) + '개';
-    document.getElementById('expScrolls2').textContent = fmt(scrolls2, 1) + '장';
-    document.getElementById('cost2').textContent = money(cost2);
-    document.getElementById('rev2').textContent = money(reward);
-    var p2 = document.getElementById('profit2');
-    p2.textContent = (profit2>=0?'+':'') + money(profit2);
-    p2.className = profit2>=0 ? 'g' : 'r';
-    var v2 = document.getElementById('verdict2');
-    v2.className = 'verdict ' + (profit2>=0?'good':'bad');
-    v2.textContent = profit2>=0
-      ? '👍 완성 비용보다 매입 보상이 큽니다 (+' + money(profit2) + ')'
-      : '👎 완성 비용이 매입 보상보다 큽니다 (−' + money(-profit2) + ')';
+    var box = document.getElementById('profitBox');
+    if (reward > 0 && basePrice > 0){
+      var cost = bases * basePrice + scrollCost;
+      var profit = reward - cost;
+      document.getElementById('cost').textContent = fmt(cost);
+      document.getElementById('rew').textContent = fmt(reward);
+      var pf = document.getElementById('profit');
+      pf.textContent = (profit>=0?'+':'') + fmt(profit);
+      pf.className = profit>=0 ? 'g' : 'r';
+      var v = document.getElementById('verdict');
+      v.className = 'verdict ' + (profit>=0?'good':'bad');
+      v.textContent = profit>=0
+        ? '👍 지금 베이스 가격 기준, 기대값상 ' + fmt(profit) + ' 다이아 이득'
+        : '👎 지금 베이스 가격 기준, 기대값상 ' + fmt(-profit) + ' 다이아 손해';
+      box.style.display = 'block';
+    } else {
+      box.style.display = 'none';
+    }
 
     document.getElementById('result').style.display = 'block';
   };
